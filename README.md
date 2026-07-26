@@ -12,7 +12,7 @@ Claude Code 提示音插件:在需要你的时候轻声提醒,让你放心切走
 ## 安装
 
 ```
-/plugin marketplace add <你的GitHub用户名>/claude-bell
+/plugin marketplace add ChALyX/claude-bell
 /plugin install claude-bell@claude-bell
 ```
 
