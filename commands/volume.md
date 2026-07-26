@@ -1,13 +1,13 @@
 ---
-description: 设置提示音音量 (0-100),立即生效无需重启
+description: Set notification sound volume (0-100), effective immediately, no restart needed
 argument-hint: <0-100>
 ---
 
-用户想把 claude-bell 插件的提示音音量设为:$ARGUMENTS
+The user wants to set the claude-bell notification sound volume to: $ARGUMENTS
 
-请执行以下步骤:
+Follow these steps:
 
-1. 校验参数是 0-100 的整数。如果为空或无效,读取 `~/.claude/claude-bell/volume.txt` 报告当前音量(文件不存在则为默认值 100),并提示用法 `/claude-bell:volume <0-100>`,然后结束。
-2. 确保目录 `~/.claude/claude-bell/` 存在,把该整数写入 `~/.claude/claude-bell/volume.txt`(只写数字,无其他内容)。
-3. 用新音量播放试听音效让用户确认效果:`bash "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh" complete`
-4. 告知用户:音量已设为 N,立即生效(每次播放时读取,无需重启);设为 0 即静音。
+1. Validate that the argument is an integer between 0 and 100. If it is empty or invalid, read `~/.claude/claude-bell/volume.txt` and report the current volume (default 100 if the file does not exist), show the usage `/claude-bell:volume <0-100>`, then stop.
+2. Ensure the directory `~/.claude/claude-bell/` exists, then write the integer to `~/.claude/claude-bell/volume.txt` (the number only, nothing else).
+3. Play a test sound at the new volume so the user can confirm: `bash "${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh" complete`
+4. Tell the user: volume is set to N, effective immediately (read on every playback, no restart needed); 0 means mute.

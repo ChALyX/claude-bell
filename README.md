@@ -36,7 +36,6 @@ Takes effect immediately, no restart needed:
 ```
 
 - Range 0–100, `0` mutes, no argument shows the current volume
-- Alternatively, write an integer to `~/.claude/claude-bell/volume.txt`
 
 ## Replace the sounds
 
