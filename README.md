@@ -1,63 +1,59 @@
 # claude-bell
 
-Claude Code 提示音插件:在需要你的时候轻声提醒,让你放心切走窗口干别的事。
+English | [中文](README.zh-CN.md)
 
-| 时机 | 音效 |
-|------|------|
-| Claude 请求确认 / 等待输入 | "叮—咚?"(上行双音,疑问语气) |
-| Claude 完成任务 | "叮咚—DAA!"(同一旋律线收束到主和弦) |
+Notification sounds for Claude Code: a gentle chime when Claude needs you, so you can safely switch away and do something else.
 
-音效短促(约 1 秒)、音量柔和,两者共用同一音色,盲听可区分。支持 Windows / macOS / Linux。
+| When | Sound |
+|------|-------|
+| Claude asks for confirmation / waits for input | "ding-dong?" (rising two-note, question intonation) |
+| Claude finishes a task | "ding-dong-DAA!" (same melodic line resolving into a chord) |
 
-## 安装
+Sounds are short (~1s) and soft, share one timbre, and are distinguishable at a glance. Works on Windows / macOS / Linux.
+
+## Install
 
 ```
 /plugin marketplace add ChALyX/claude-bell
 /plugin install claude-bell@claude-bell
 ```
 
-也可以克隆到本地后用本地路径安装:
+Or clone and install from a local path:
 
 ```
 /plugin marketplace add /path/to/claude-bell
 /plugin install claude-bell@claude-bell
 ```
 
-安装后重启 Claude Code(或执行 `/reload-plugins`)生效。
+Restart Claude Code (or run `/reload-plugins`) to activate.
 
-## 调整音量
+## Adjust volume
 
-改动立即生效,无需重启:
+Takes effect immediately, no restart needed:
 
 ```
 /claude-bell:volume 50
 ```
 
-- 取值 0–100,`0` 为静音,不带参数显示当前音量
-- 也可直接把整数写入 `~/.claude/claude-bell/volume.txt`
+- Range 0–100, `0` mutes, no argument shows the current volume
+- Alternatively, write an integer to `~/.claude/claude-bell/volume.txt`
 
-## 替换音效
+## Replace the sounds
 
-把你自己的音效文件放到 `~/.claude/claude-bell/`(Windows 即 `C:\Users\<你>\.claude\claude-bell\`):
+Put your own sound files in `~/.claude/claude-bell/` (on Windows: `C:\Users\<you>\.claude\claude-bell\`):
 
-- `notify.wav` — 请求确认提示音
-- `complete.wav` — 任务完成提示音
+- `notify.wav` — played when Claude asks for confirmation
+- `complete.wav` — played when a task completes
 
-文件存在即优先于插件自带音效,删除即恢复默认。
+If present, they take priority over the built-in sounds; delete them to restore the defaults.
 
-**支持格式:仅 WAV**(受 Windows 播放器限制),建议时长 1.5 秒以内。
+**Supported format: WAV only** (a Windows player limitation), recommended length under 1.5s.
 
-想微调默认音效(音高、时长、音色),编辑 `scripts/generate-sounds.py` 中的参数后重新运行即可,无第三方依赖:
+## Slash commands
 
-```
-python scripts/generate-sounds.py
-```
-
-## 斜杠命令
-
-| 命令 | 说明 |
-|------|------|
-| `/claude-bell:volume <0-100>` | 设置提示音音量,立即生效;`0` 静音;不带参数显示当前音量 |
+| Command | Description |
+|---------|-------------|
+| `/claude-bell:volume <0-100>` | Set volume, effective immediately; `0` mutes; no argument shows current volume |
 
 ## License
 
