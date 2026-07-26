@@ -1,0 +1,13 @@
+{
+  "name": "claude-bell",
+  "owner": {
+    "name": "chalyx"
+  },
+  "plugins": [
+    {
+      "name": "claude-bell",
+      "source": "./",
+      "description": "Gentle notification sounds for confirmation requests and task completion"
+    }
+  ]
+}

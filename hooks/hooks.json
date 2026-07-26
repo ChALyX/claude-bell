@@ -1,0 +1,29 @@
+{
+  "description": "Play a gentle sound when Claude needs your confirmation (Notification) or finishes a task (Stop)",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh\" notify",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/play-sound.sh\" complete",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
