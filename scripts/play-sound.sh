@@ -8,16 +8,6 @@
 name="$1"
 [ -n "$name" ] || exit 0
 
-# Hook passes the event JSON on stdin. The Notification event also fires a
-# "Claude is waiting for your input" reminder after 60s idle — skip that one,
-# only real permission/attention requests should ring.
-if [ ! -t 0 ]; then
-  event_json="$(cat)"
-  case "$event_json" in
-    *"waiting for your input"*) exit 0 ;;
-  esac
-fi
-
 # Resolve plugin root: env var from Claude Code, else relative to this script
 root="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 

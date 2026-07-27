@@ -6,7 +6,7 @@ Notification sounds for Claude Code: a gentle chime when Claude needs you, so yo
 
 | When | Sound |
 |------|-------|
-| Claude asks for confirmation / waits for input | "ding-dong?" (rising two-note, question intonation) |
+| Claude asks for permission / needs your input | "ding-dong?" (rising two-note, question intonation) |
 | Claude finishes a task | "ding-dong-DAA!" (same melodic line resolving into a chord) |
 
 Sounds are short (~1s) and soft, share one timbre, and are distinguishable at a glance. Works on Windows / macOS / Linux.
