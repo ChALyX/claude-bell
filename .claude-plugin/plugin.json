@@ -1,6 +1,6 @@
 {
   "name": "claude-bell",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Gentle notification sounds: a rising two-note chime when Claude needs your confirmation, a resolved major arpeggio when a task completes. Sounds are user-replaceable.",
   "author": {
     "name": "chalyx"

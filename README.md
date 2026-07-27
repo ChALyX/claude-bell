@@ -11,6 +11,23 @@ Notification sounds for Claude Code: a gentle chime when Claude needs you, so yo
 
 Sounds are short (~1s) and soft, share one timbre, and are distinguishable at a glance. Works on Windows / macOS / Linux.
 
+## When it rings (and when it deliberately doesn't)
+
+`notify` rides on Claude Code's `Notification` event, which is **not** emitted the moment a permission prompt appears. Claude Code first waits a few seconds to see whether you are there:
+
+| You | Result |
+|-----|--------|
+| Answer the prompt right away | Notification is cancelled — **no sound at all**. You were at the keyboard, so it doesn't interrupt you. |
+| Leave it unanswered | Event fires and the chime plays, roughly 6.5s after the prompt appeared. |
+
+So silence on a prompt you answered instantly is expected, not a missed sound. This wait is Claude Code's own behaviour: no setting exposes it, and it cannot be shortened from a plugin.
+
+`complete` rides on `Stop`, which has no such wait — it plays at the end of every turn, about 1.3s later. That 1.3s is the cost of spawning a script host and opening an audio device (on Windows, PowerShell + WPF MediaPlayer); it is the only part of the delay this plugin owns.
+
+The 60s idle reminder (`idle_prompt`) is filtered out on purpose and never rings.
+
+*Timings measured on Windows 11; other platforms will differ.*
+
 ## Install
 
 ```
@@ -25,7 +42,7 @@ Or clone and install from a local path:
 /plugin install claude-bell@claude-bell
 ```
 
-Restart Claude Code (or run `/reload-plugins`) to activate.
+**Restart Claude Code** to activate. `/reload-plugins` is not enough — hook config is only read at startup, and reloading plugins does not pick it up.
 
 ## Adjust volume
 
