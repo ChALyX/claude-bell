@@ -3,7 +3,6 @@
   "hooks": {
     "Notification": [
       {
-        "matcher": "permission_prompt|agent_needs_input|elicitation_dialog",
         "hooks": [
           {
             "type": "command",

@@ -8,6 +8,16 @@
 name="$1"
 [ -n "$name" ] || exit 0
 
+# Notification fires for several kinds of notice; its JSON carries the kind in
+# notification_type. The 60s idle reminder is the one that should stay silent -
+# every other kind means Claude is actually waiting on you. Stop has no such
+# field and never reaches this branch.
+if [ "$name" = "notify" ] && [ ! -t 0 ]; then
+  case "$(cat)" in
+    *'"notification_type":"idle_prompt"'*) exit 0 ;;
+  esac
+fi
+
 # Resolve plugin root: env var from Claude Code, else relative to this script
 root="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
 
