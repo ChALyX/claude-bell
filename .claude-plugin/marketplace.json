@@ -1,5 +1,6 @@
 {
   "name": "claude-bell",
+  "description": "Notification sounds for Claude Code: a gentle chime when Claude needs you, so you can safely switch away.",
   "owner": {
     "name": "chalyx"
   },

@@ -4,5 +4,8 @@
   "description": "Gentle notification sounds: a rising two-note chime when Claude needs your confirmation, a resolved major arpeggio when a task completes. Sounds are user-replaceable.",
   "author": {
     "name": "chalyx"
-  }
+  },
+  "homepage": "https://github.com/ChALyX/claude-bell",
+  "repository": "https://github.com/ChALyX/claude-bell",
+  "license": "MIT"
 }
