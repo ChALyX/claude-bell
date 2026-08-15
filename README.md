@@ -17,14 +17,13 @@ Sounds are short (~1s) and soft, share one timbre, and are distinguishable at a 
 
 ## Hear them
 
-Both chimes, one second apart. The preview below is silent — **click it to play the 4-second clip with sound**:
+![claude-bell demo — the two notification sounds](assets/demo.gif)
 
-[![claude-bell demo — the two notification sounds](assets/demo.gif)](assets/demo.mp4)
+Both chimes, one second apart. The preview above is silent — GitHub won't play audio in the page, so to actually hear them, grab one of these:
 
-Or play the sound files directly, no install needed:
-
-- 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **needs your input**
-- ✅ [`sounds/complete.wav`](sounds/complete.wav) — **task complete**
+- 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **needs your input**, ~1s
+- ✅ [`sounds/complete.wav`](sounds/complete.wav) — **task complete**, ~1s
+- 🎬 [`assets/demo.mp4`](assets/demo.mp4) — both of them, with sound, 4s
 
 ## Install
 

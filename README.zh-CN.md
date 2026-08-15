@@ -17,14 +17,13 @@
 
 ## 先听听
 
-两个提示音,中间隔 1 秒。下面这张预览图是没声音的,**点一下就能听 4 秒带声音的版本**:
+![claude-bell 提示音演示](assets/demo.gif)
 
-[![claude-bell 提示音演示](assets/demo.gif)](assets/demo.mp4)
+两个提示音,中间隔 1 秒。上面这张预览是没声音的 —— GitHub 不能在页面里播音频,想真听一下就下其中一个:
 
-也可以直接点音频文件听,不用装:
-
-- 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **需要你的输入**
-- ✅ [`sounds/complete.wav`](sounds/complete.wav) — **任务完成**
+- 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **需要你的输入**,约 1 秒
+- ✅ [`sounds/complete.wav`](sounds/complete.wav) — **任务完成**,约 1 秒
+- 🎬 [`assets/demo.mp4`](assets/demo.mp4) — 两个都有,带声音,4 秒
 
 ## 安装
 
