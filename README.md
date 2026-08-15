@@ -17,11 +17,11 @@ Sounds are short (~1s) and soft, share one timbre, and are distinguishable at a 
 
 ## Hear them
 
-Turn your sound on and press play — 4 seconds, both chimes, one second apart:
+Both chimes, one second apart. The preview below is silent — **click it to play the 4-second clip with sound**:
 
-<video src="https://github.com/ChALyX/claude-bell/raw/main/assets/demo.mp4" controls playsinline width="720"></video>
+[![claude-bell demo — the two notification sounds](assets/demo.gif)](assets/demo.mp4)
 
-If the player doesn't load, click either file to play it — no install needed:
+Or play the sound files directly, no install needed:
 
 - 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **needs your input**
 - ✅ [`sounds/complete.wav`](sounds/complete.wav) — **task complete**

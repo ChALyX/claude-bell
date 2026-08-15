@@ -17,11 +17,11 @@
 
 ## 先听听
 
-打开声音点播放,4 秒,两个提示音,中间隔 1 秒:
+两个提示音,中间隔 1 秒。下面这张预览图是没声音的,**点一下就能听 4 秒带声音的版本**:
 
-<video src="https://github.com/ChALyX/claude-bell/raw/main/assets/demo.mp4" controls playsinline width="720"></video>
+[![claude-bell 提示音演示](assets/demo.gif)](assets/demo.mp4)
 
-播放器加载不出来的话,点这两个文件也能直接听,不用装:
+也可以直接点音频文件听,不用装:
 
 - 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **需要你的输入**
 - ✅ [`sounds/complete.wav`](sounds/complete.wav) — **任务完成**
