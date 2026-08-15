@@ -17,7 +17,11 @@ Sounds are short (~1s) and soft, share one timbre, and are distinguishable at a 
 
 ## Hear them
 
-![claude-bell demo — the two notification sounds](https://github.com/user-attachments/assets/a89da120-e309-4819-b0aa-b20504b806b5)
+Both chimes, one second apart — press play, with the sound on:
+
+https://github.com/user-attachments/assets/a89da120-e309-4819-b0aa-b20504b806b5
+
+Or grab the files on their own:
 
 - 🔔 [`sounds/notify.wav`](sounds/notify.wav) — **needs your input**, ~1s
 - ✅ [`sounds/complete.wav`](sounds/complete.wav) — **task complete**, ~1s
